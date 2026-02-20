@@ -25,15 +25,16 @@ public class SettleUpService {
 
     public List<Expense> settleUpUser(Long userID) {
         // Logic to settle up between users
-        User user = userRepo.findById(userID).get();
-        List<ExpenseUser> expenseUserList = expenseUserRepo.findAllByUser(user);
-
-        List<Expense> expenseList = new ArrayList<>();
-        for (ExpenseUser expenseUser : expenseUserList) {
-            expenseList.add(expenseUser.getExpense());
-        }
-
-        List<Expense> settledUpExpenses = settleUpStrategy.settleUp(expenseList);
-        return settledUpExpenses;
+//        User user = userRepo.findById(userID).get();
+//        List<ExpenseUser> expenseUserList = expenseUserRepo.findAllByUser(user);
+//
+//        List<Expense> expenseList = new ArrayList<>();
+//        for (ExpenseUser expenseUser : expenseUserList) {
+//            expenseList.add(expenseUser.getExpense());
+//        }
+//
+//        List<Expense> settledUpExpenses = settleUpStrategy.settleUp(expenseList);
+//        return settledUpExpenses;
+        return new ArrayList<>();
     }
 }
